@@ -1,7 +1,23 @@
-import React from 'react'
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+// Icons
+import {
+  RiBarChart2Line,
+  RiEarthLine,
+  RiCustomerService2Line,
+  RiCalendarTodoLine,
+  RiLogoutCircleRLine,
+  RiArrowRightSLine,
+  RiMenu3Line,
+  RiCloseLine,
+} from "react-icons/ri";
 
 const Sidebar = () => {
+  const [showMenu, setShowMenu] = useState(false);
+  const [showSubmenu, setShowSubmenu] = useState(false);
+  const [showSubmenu1, setShowSubmenu1] = useState(false);
   return (
+<<<<<<< HEAD
     <div className='xl:h-[100vh] overflow-y-scroll xl:static fixed w-full h-full -left-full top-0 bg-secondary-100'>
        <div>
         <h1 className='text-center text-2xl font-bold text-white mb-10'>
@@ -11,5 +27,164 @@ const Sidebar = () => {
         </div>
   )
 }
+=======
+    <>
+      <div
+        className={`xl:h-[100vh] overflow-y-scroll  bg-white fixed xl:static shadow-xl 
+         w-[80%] md:w-[40%] lg:w-[30%] xl:w-auto h-full top-0  p-4 flex flex-col justify-between z-50 ${
+          showMenu ? "left-0" : "-left-full"
+        } transition-all`}
+      >
+        <div>
+          <h1 className="text-center text-2xl font-bold text-white mb-10">
+            Admin<span className="text-primary text-4xl">.</span>
+          </h1>
+          <ul>
+            <li>
+              <Link
+                to="/"
+                className="flex items-center gap-4 py-2 px-4 rounded-lg hover:bg-secondary-900 transition-colors"
+              >
+                <RiBarChart2Line className="text-primary" /> Analíticas
+              </Link>
+            </li>
+            <li>
+              <button
+                onClick={() => setShowSubmenu(!showSubmenu)}
+                className="w-full flex items-center justify-between py-2 px-4 rounded-lg hover:bg-secondary-900 transition-colors"
+              >
+                <span className="flex items-center gap-4">
+                  <RiEarthLine className="text-primary" /> Personal
+                </span>
+                <RiArrowRightSLine
+                  className={`mt-1 ${
+                    showSubmenu && "rotate-90"
+                  } transition-all`}
+                />
+              </button>
+              <ul
+                className={` ${
+                  showSubmenu ? "h-[130px]" : "h-0"
+                } overflow-y-hidden transition-all`}
+              >
+                <li>
+                  <Link
+                    to="/"
+                    className="py-2 px-4 border-l border-gray-500 ml-6 block relative before:w-3 before:h-3 before:absolute before:bg-primary before:rounded-full before:-left-[6.5px] before:top-1/2 before:-translate-y-1/2 before:border-4 before:border-secondary-100 hover:text-white transition-colors"
+                  >
+                    Empleados
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/"
+                    className="py-2 px-4 border-l border-gray-500 ml-6 block relative before:w-3 before:h-3 before:absolute before:bg-gray-500 before:rounded-full before:-left-[6.5px] before:top-1/2 before:-translate-y-1/2 before:border-4 before:border-secondary-100 hover:text-white transition-colors"
+                  >
+                    Planilla
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/"
+                    className="py-2 px-4 border-l border-gray-500 ml-6 block relative before:w-3 before:h-3 before:absolute before:bg-gray-500 before:rounded-full before:-left-[6.5px] before:top-1/2 before:-translate-y-1/2 before:border-4 before:border-secondary-100 hover:text-white transition-colors"
+                  >
+                    Detalle
+                  </Link>
+                </li>
+              </ul>
+            </li>
+            <li>
+            <button
+                onClick={() => setShowSubmenu1(!showSubmenu1)}
+                className="w-full flex items-center justify-between py-2 px-4 rounded-lg hover:bg-secondary-900 transition-colors"
+              >
+                <span className="flex items-center gap-4">
+                  <RiEarthLine className="text-primary" /> Planilla
+                </span>
+                <RiArrowRightSLine
+                  className={`mt-1 ${
+                    showSubmenu1 && "rotate-90"
+                  } transition-all`}
+                />
+              </button>
+              <ul
+                className={` ${
+                  showSubmenu1 ? "h-[160px]" : "h-0"
+                } overflow-y-hidden transition-all`}
+              >
+                <li>
+                  <Link
+                    to="/"
+                    className="py-2 px-4 border-l border-gray-500 ml-6 block relative before:w-3 before:h-3 before:absolute before:bg-gray-500 before:rounded-full before:-left-[6.5px] before:top-1/2 before:-translate-y-1/2 before:border-4 before:border-secondary-100 hover:bg-secondary-900 transition-colors"
+                  >
+                    Asistencia Diaria
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/"
+                    className="py-2 px-4 border-l border-gray-500 ml-6 block relative before:w-3 before:h-3 before:absolute before:bg-gray-500 before:rounded-full before:-left-[6.5px] before:top-1/2 before:-translate-y-1/2 before:border-4 before:border-secondary-100 hover:text-white transition-colors"
+                  >
+                    Empleados
+                  </Link>
+>>>>>>> 4f7532e62f449746c8b9894523063408c59d30c8
 
-export default Sidebar
+                </li>
+                <li>
+                  <Link
+                    to="/"
+                    className="py-2 px-4 border-l border-gray-500 ml-6 block relative before:w-3 before:h-3 before:absolute before:bg-gray-500 before:rounded-full before:-left-[6.5px] before:top-1/2 before:-translate-y-1/2 before:border-4 before:border-secondary-100 hover:text-white transition-colors"
+                  >
+                    Deducciones
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/"
+                    className="py-2 px-4 border-l border-gray-500 ml-6 block relative before:w-3 before:h-3 before:absolute before:bg-gray-500 before:rounded-full before:-left-[6.5px] before:top-1/2 before:-translate-y-1/2 before:border-4 before:border-secondary-100 hover:text-white transition-colors"
+                  >
+                    Deducciones
+                  </Link>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <Link
+                to="/tickets"
+                className="flex items-center gap-4 py-2 px-4 rounded-lg hover:bg-secondary-900 transition-colors"
+              >
+                <RiCustomerService2Line className="text-primary" /> Soporte
+                técnico
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/"
+                className="flex items-center gap-4 py-2 px-4 rounded-lg hover:bg-secondary-900 transition-colors"
+              >
+                <RiCalendarTodoLine className="text-primary" /> Calendario
+              </Link>
+            </li>
+            
+          </ul>
+        </div>
+        <nav>
+          <Link
+            to="/"
+            className="flex items-center gap-4 py-2 px-4 rounded-lg hover:bg-secondary-900 transition-colors"
+          >
+            <RiLogoutCircleRLine className="text-primary" /> Cerrar sesión
+          </Link>
+        </nav>
+      </div>
+      <button
+        onClick={() => setShowMenu(!showMenu)}
+        className="xl:hidden fixed bottom-4 right-4 bg-primary text-black p-3 rounded-full z-50"
+      >
+        {showMenu ? <RiCloseLine /> : <RiMenu3Line />}
+      </button>
+    </>
+  );
+};
+
+export default Sidebar;
