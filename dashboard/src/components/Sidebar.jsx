@@ -17,17 +17,7 @@ const Sidebar = () => {
   const [showSubmenu, setShowSubmenu] = useState(false);
   const [showSubmenu1, setShowSubmenu1] = useState(false);
   return (
-<<<<<<< HEAD
-    <div className='xl:h-[100vh] overflow-y-scroll xl:static fixed w-full h-full -left-full top-0 bg-secondary-100'>
-       <div>
-        <h1 className='text-center text-2xl font-bold text-white mb-10'>
-          Admin<span className='text-primary text-4xl'>.</span>
-        </h1>
-       </div>
-        </div>
-  )
-}
-=======
+
     <>
       <div
         className={`xl:h-[100vh] overflow-y-scroll  bg-white fixed xl:static shadow-xl 
@@ -127,7 +117,7 @@ const Sidebar = () => {
                   >
                     Empleados
                   </Link>
->>>>>>> 4f7532e62f449746c8b9894523063408c59d30c8
+
 
                 </li>
                 <li>
