@@ -2,7 +2,9 @@ import React from 'react'
 
 const Header = () => {
   return (
-    <header className='h-[7vh] md:h-[10vh] border-b border-gray-400'>Header</header>
+    <header className='h-[7vh] md:h-[10vh] border-b border-secondary-100 p-8'>
+      Header
+    </header>
   )
 }
 
